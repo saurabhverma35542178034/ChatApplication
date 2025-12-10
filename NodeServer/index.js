@@ -6,6 +6,7 @@ const io = require("socket.io")(http, {
     origin: "*",
   },
 });
+app.use(express.static("public"));
 
 const users = {};
 
