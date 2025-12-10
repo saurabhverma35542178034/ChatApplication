@@ -1,4 +1,4 @@
-const socket = io("https://chatapplication-ui92.onrender.com");
+const socket = io();
 
 // When connected
 socket.on("connect", () => {
