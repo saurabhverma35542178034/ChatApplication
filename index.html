@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Simple Chat App</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="header">Chat Application</div>
+
+    <div class="messages" id="message-container" style="background-color: blanchedalmond;">
+        <!-- messages will appear here -->
+    </div>
+
+    <div class="input-area send-conainer">
+        <input id="inputMsg" placeholder="Type message..." />
+        <button onclick="sendMsg()" class="btn">Send</button>
+    </div>
+</div>
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script src="./Js/client.js"></script>
+<!-- <script>
+
+  
+function sendMsg() {
+    let msgBox = document.getElementById("inputMsg");
+    let msg = msgBox.value.trim();
+    if (msg === "") return;
+
+    let div = document.createElement("div");
+    div.className = "msg me";
+    div.innerText = msg;
+    
+    document.getElementById("message-container").appendChild(div);
+
+    msgBox.value = "";
+}
+</script> -->
+
+</body>
+</html>
