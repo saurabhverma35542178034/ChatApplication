@@ -37,12 +37,17 @@
         gap: 10px;
     }
 
-    .msg {
-        max-width: 75%;
-        padding: 10px 14px;
-        border-radius: 10px;
-        font-size: 14px;
-    }
+   .msg {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+
+    word-wrap: break-word;    /* allow breaking long words */
+    white-space: pre-wrap;    /* wrap text preserving spaces */
+    overflow-wrap: break-word; /* modern alternative to word-wrap */
+}
+
 
     .me {
         align-self: flex-end;
@@ -86,6 +91,9 @@
 #message-container {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* horizontally center */
-  height: 100%; /* optional, if you want vertical centering */
+  gap: 10px;
+  padding: 10px;
+  height: 100%;
+  overflow-y: auto;
 }
+
